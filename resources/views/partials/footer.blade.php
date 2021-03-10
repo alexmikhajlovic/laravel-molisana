@@ -1,3 +1,7 @@
 <footer>
-    <h1>FOOTER</h1>
+    
+    <div class="footer-bottom">
+
+    </div>
+
 </footer>

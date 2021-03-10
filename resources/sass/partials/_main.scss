@@ -1,6 +1,39 @@
 main {
     text-align: center;
     margin: 50px 0;
+
+    .home {
+        height: 800px;
+        background-image: url(../../img/circle-gold.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
+    }
+
+    .products {
+        @include flex-center;
+        .product {
+            width: calc(100% / 3);
+            position: relative;
+            img.cover {
+                width: 100%;
+                opacity: 0.75;
+            }
+            .overlay {
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+            }
+            &:hover img.cover,
+            &:hover .overlay {
+                opacity: 1;
+            }
+        }
+    }
+    
     .news {
         text-align: center;
         h1 {

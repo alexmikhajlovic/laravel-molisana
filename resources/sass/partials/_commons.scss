@@ -5,7 +5,6 @@
 }
 
 body {
-    // font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -16,32 +15,12 @@ ul li {
     cursor: pointer;
 }
 
-i {
-    padding: 10px;
-}
-
 a {
     color: $molisana-color;
     text-decoration: none;
     padding: 10px;
+    border-radius: 20px;
 }
-
-
-// select {
-//     background-color: transparent;
-//     color: #fff;
-//     text-align: center;
-//     margin: 10px;
-//     padding: 3px 10px;
-//     border: none;
-//     border-bottom: 1px solid $blue-palette;
-//     -webkit-appearance: none;
-//     &:hover,
-//     &:active,
-//     &:focus {
-//         color: $blue-palette;
-//     }
-// }
 
 // @for $i from 1 through 10 {
 //     .m-#{$i * 10} {
