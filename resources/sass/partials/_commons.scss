@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul li {
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+i {
+    padding: 10px;
+}
+
+a {
+    color: $molisana-color;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+// select {
+//     background-color: transparent;
+//     color: #fff;
+//     text-align: center;
+//     margin: 10px;
+//     padding: 3px 10px;
+//     border: none;
+//     border-bottom: 1px solid $blue-palette;
+//     -webkit-appearance: none;
+//     &:hover,
+//     &:active,
+//     &:focus {
+//         color: $blue-palette;
+//     }
+// }
+
+// @for $i from 1 through 10 {
+//     .m-#{$i * 10} {
+//     margin-top: 10px * $i;
+//     }
+// }
+
+// @for $i from 1 through 10 {
+//     .p-#{$i * 10} {
+//     padding: 10px * $i;
+//     }
+// }

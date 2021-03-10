@@ -1,0 +1,9 @@
+header {
+    text-align: center;
+    nav {
+        @include flex-center;
+    }
+    ul li a:hover {
+        background-color: $molisana-secondcolor;
+    }
+}
