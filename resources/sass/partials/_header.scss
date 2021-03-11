@@ -3,8 +3,10 @@ header {
 
     nav {
         @include flex-center;
+        margin-top: 20px;
     }
     
+    ul li a.active,
     ul li a:hover {
         background-color: $molisana-secondcolor;
     }
