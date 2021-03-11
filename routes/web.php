@@ -26,24 +26,48 @@ Route::get('/products', function () {
 
     $pasta = config('pasta');
 
-    $data = ['contents' => $pasta];
+    $pasta_lunga = array_filter($pasta, function($k) {
+        return $k['tipo'] == 'lunga';
+    });
+
+    $pasta_corta = array_filter($pasta, function($k) {
+        return $k['tipo'] == 'corta';
+    });
+
+    $pasta_cortissima = array_filter($pasta, function($k) {
+        return $k['tipo'] == 'cortissima';
+    });
+
+    $data = [
+        'contents' => [
+            'lunga' => $pasta_lunga,
+            'corta' => $pasta_corta,
+            'cortissima' => $pasta_cortissima
+        ]
+    ];
 
     return view('products', $data);
 
 })->name('products-page');
 
-// TODO: PRODUCT
+// PRODUCT
 Route::get('/product/{id}', function ($id) {
 
     $pasta = config('pasta');
 
-    $product = $pasta[$id];
+    if(is_numeric($id) && $id >= 0 && $id < count($pasta)){
 
-    $data = [
-        'product' => $product
-    ];
+        $product = $pasta[$id];
 
-    return view('product', $data);
+        $data = [
+            'product' => $product
+        ];
+
+        return view('product', $data);
+
+    } else {
+        abort('404');
+    }
 
     // return 'Prodotto n°= ' .$id;
 

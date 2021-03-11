@@ -4,23 +4,32 @@
 
 @section('content')
     
-    <div class="products">
+@foreach($contents as $key => $content)
 
-        @foreach($contents as $key => $content)
-            <div class="product">
+    <div class="products-container">
 
-            <!-- Cover -->
-                <img src="{{$content['src']}}" class="cover" alt="{{$content['titolo']}}" title="{{$content['titolo']}}">
+        <h2>{{$key}}</h2>
 
-                <!-- Link to product -->
-                <div class="overlay">
-                    <a href="{{ route('product-page', ['id' => $key]) }}" target="_blank" rel="noopener noreferrer" title="{{$content['titolo']}}">{{$content['titolo']}}</a>
-                </div>
-
-            </div>
-        @endforeach
-
+        <div class="products">
+    
+                @foreach($content as $key => $pasta)
+                    <div class="product">
+    
+                        <!-- Cover -->
+                        <img src="{{$pasta['src']}}" class="cover" alt="{{$pasta['titolo']}}" title="{{$pasta['titolo']}}">
+        
+                        <!-- Link to product -->
+                        <div class="overlay">
+                            <a href="{{ route('product-page', ['id' => $key]) }}" target="_blank" rel="noopener noreferrer" title="{{$pasta['titolo']}}">{{$pasta['titolo']}}</a>
+                        </div>
+                        
+                    </div>
+                @endforeach
+    
+        </div>
 
     </div>
 
+@endforeach
+        
 @endsection
